@@ -18,7 +18,7 @@ def main():
 
     problem_number = int(args.problem_num)
 
-    importlib.import_module('euler.problem_{}.solver'.format(problem_number))
+    importlib.import_module('euler.problem_{}.solver.solve'.format(problem_number))
 
     start_time = time.time()
 
