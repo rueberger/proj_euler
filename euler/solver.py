@@ -18,11 +18,11 @@ def main():
 
     problem_number = int(args.problem_num)
 
-    importlib.import_module('euler.problem_{}.solver.solve'.format(problem_number))
+    solver_module = importlib.import_module('euler.problem_{}.solver'.format(problem_number))
 
     start_time = time.time()
 
-    print(solve())
+    print(solver_module.solve())
 
     print('Elapsed time: {}'.format(time.time() - start_time))
 
