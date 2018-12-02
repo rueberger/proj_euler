@@ -46,4 +46,3 @@ def fib_n(n_idx):
         return 1
     else:
         return fib_n(n_idx - 1) + fib_n(n_idx - 2)
-p
