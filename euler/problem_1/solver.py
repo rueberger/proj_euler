@@ -5,4 +5,9 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 """
 
 def solve():
-    pass
+    """ A streaming solution with constant memory usage is possible, this is cleaner
+    """
+    multiples_of_3 = set(range(0, 1000, 3))
+    multiples_of_5 = set(range(0, 1000, 5))
+    multiples_of_either = multiples_of_3.union(multiples_of_5)
+    return sum(multiples_of_either)
